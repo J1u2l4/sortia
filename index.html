@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f2faf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c1f22" media="(prefers-color-scheme: dark)">
+<title>Soteria Health & Wellness | Psychiatric care in Kabulonga, Lusaka</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2faf7;--surface:#fff;--ink:#12343b;--muted:#4d6b70;--teal:#0e6b6b;--leaf:#3fb594;--sky:#5b7fc0;--line:#d3e9e2;--deep:#0b4a50;--on-deep:#eafaf5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1f22;--surface:#12302f;--ink:#e6f5f0;--muted:#9fc2bb;--teal:#5fd1b0;--line:#21443f;--deep:#06282b;--on-deep:#eafaf5;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0c1f22;--surface:#12302f;--ink:#e6f5f0;--muted:#9fc2bb;--teal:#5fd1b0;--line:#21443f;--deep:#06282b;--on-deep:#eafaf5;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Figtree,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;line-height:1.08;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(2rem,4.6vw,3.2rem);font-weight:800}
+h3{font-size:1.25rem;font-weight:700}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:96px 0}
+.lead{color:var(--muted);max-width:56ch;margin-top:16px}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:20;padding-top:env(safe-area-inset-top,0px);transition:background .3s,box-shadow .3s}
+header.solid{background:var(--glass);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font:800 1.5rem 'Bricolage Grotesque';text-decoration:none;color:var(--teal);display:flex;align-items:center;gap:8px}
+.logo svg{width:30px;height:30px}
+.links{display:flex;gap:26px;align-items:center}
+.links a{text-decoration:none;font-weight:500;font-size:.95rem;position:relative}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--leaf);transition:width .3s}
+.links a:not(.btn):hover::after{width:100%}
+.btn{display:inline-block;background:var(--teal);color:#fff;padding:13px 24px;border-radius:999px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:1rem;font-family:inherit;transition:transform .25s,box-shadow .25s}
+:root[data-theme="dark"] .btn,:root:not([data-theme="light"]) .btn{--x:0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#06282b}}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 24px -10px var(--teal)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
+.menu{display:none;background:none;border:0;font-size:1.7rem;color:var(--ink);cursor:pointer}
+/* hero */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:120px 0 70px;position:relative;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;animation:drift 18s ease-in-out infinite alternate;z-index:0}
+.b1{width:420px;height:420px;background:var(--leaf);top:-80px;right:-60px}
+.b2{width:340px;height:340px;background:var(--sky);bottom:-90px;left:-80px;animation-delay:-8s}
+@keyframes drift{to{transform:translate(50px,40px) scale(1.15)}}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:clamp(2.7rem,7vw,5.2rem);font-weight:800}
+.hero h1 span{display:block;opacity:0;transform:translateY(40px);animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 span:nth-child(2){animation-delay:.18s;color:var(--teal)}
+.hero p.lead{opacity:0;animation:rise .9s .4s forwards}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;opacity:0;animation:rise .9s .55s forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.status{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);padding:8px 16px;border-radius:999px;font-size:.9rem;margin-bottom:22px}
+.dot{width:10px;height:10px;border-radius:50%;background:#aaa;position:relative}
+.dot.on{background:var(--leaf)}
+.dot.on::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--leaf);animation:ping 1.8s infinite}
+@keyframes ping{to{transform:scale(3);opacity:0}}
+/* breathe */
+.breathe{display:grid;place-items:center;text-align:center}
+.orbwrap{position:relative;width:min(340px,80vw);height:min(340px,80vw);aspect-ratio:1;display:grid;place-items:center;cursor:pointer;border:0;background:none;color:inherit;font:inherit}
+.orb{position:absolute;inset:12%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#bff3e0,var(--leaf) 55%,var(--teal));box-shadow:0 0 80px -10px var(--leaf);transform:scale(.7);transition:transform 4s ease-in-out}
+.orbwrap.in .orb{transform:scale(1.15)}
+.ring{position:absolute;inset:0;border-radius:50%;border:2px dashed var(--leaf);opacity:.5;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.orbtxt{position:relative;font:700 1.4rem 'Bricolage Grotesque';color:#06282b}
+.hint{margin-top:18px;color:var(--muted);font-size:.9rem}
+/* services */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:30px;transition:transform .35s,box-shadow .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 40px -24px rgba(14,107,107,.45)}
+.card .ic{width:50px;height:50px;border-radius:16px;background:var(--leaf22);display:grid;place-items:center;font-size:1.5rem;margin-bottom:18px;transition:transform .4s}
+.card:hover .ic{transform:rotate(-8deg) scale(1.1)}
+.card p{color:var(--muted);margin-top:10px;font-size:.97rem}
+/* scope tabs */
+.scope{background:var(--deep);color:var(--on-deep);border-radius:32px;margin-top:20px;padding:46px;display:grid;grid-template-columns:260px 1fr;gap:40px}
+.tabs{display:flex;flex-direction:column;gap:6px}
+.tab{background:none;border:0;color:inherit;text-align:left;font:600 1rem Figtree;padding:12px 16px;border-radius:14px;cursor:pointer;opacity:.7;transition:background .25s,opacity .25s,padding .25s}
+.tab:hover{opacity:1}
+.tab[aria-selected=true]{background:rgba(255,255,255,.13);opacity:1;padding-left:24px}
+.panel{display:none}
+.panel.show{display:block;animation:fade .5s}
+@keyframes fade{from{opacity:0;transform:translateX(16px)}}
+.panel h3{font-size:1.7rem}
+.panel p{opacity:.85;margin:10px 0 18px;max-width:50ch}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{border:1px solid rgba(255,255,255,.3);padding:7px 16px;border-radius:999px;font-size:.92rem}
+/* kids */
+.kids{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.kidart{aspect-ratio:1;border-radius:46% 54% 50% 50%/50% 46% 54% 50%;background:linear-gradient(140deg,var(--leaf),var(--sky));position:relative;animation:morph 12s ease-in-out infinite alternate;display:grid;place-items:center;overflow:hidden}
+@keyframes morph{to{border-radius:56% 44% 40% 60%/42% 58% 42% 58%}}
+.kidart svg{width:70%}
+.list{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+.list li{padding-left:34px;position:relative}
+.list li::before{content:"";position:absolute;left:0;top:.35em;width:20px;height:20px;border-radius:50%;background:var(--leaf)}
+.list li::after{content:"";position:absolute;left:7px;top:.5em;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+/* habits */
+.habits{background:var(--habitbg)}
+.habitgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.habit{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;cursor:pointer;text-align:left;font:inherit;color:inherit;transition:transform .3s,background .3s}
+.habit:hover{transform:translateY(-4px)}
+.habit .em{font-size:2rem;display:block;margin-bottom:10px}
+.habit .more{max-height:0;overflow:hidden;color:var(--muted);font-size:.95rem;transition:max-height .5s,margin .5s}
+.habit[aria-pressed=true]{background:var(--teal);color:#fff}
+.habit[aria-pressed=true] .more{max-height:160px;margin-top:10px;color:#e8fbf5}
+.progress{margin-top:28px;display:flex;align-items:center;gap:14px;color:var(--muted)}
+.bar{flex:1;max-width:320px;height:10px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--leaf),var(--sky));border-radius:99px;transition:width .6s cubic-bezier(.3,1.4,.5,1)}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.hours{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:32px}
+.hours dl{margin:18px 0 0}
+.hours dt{font-weight:600;margin-top:18px}
+.hours dd{margin:4px 0 0;color:var(--muted);display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:6px}
+form{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:32px;display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:600;font-size:.92rem}
+input,select,textarea{font:inherit;padding:13px 14px;border-radius:14px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);transition:border-color .25s,box-shadow .25s}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--leaf);box-shadow:0 0 0 4px var(--leaf25)}
+.done{display:none;text-align:center;padding:10px 0}
+.done.show{display:block;animation:fade .6s}
+.tick{width:64px;height:64px;margin:0 auto 14px}
+.tick circle,.tick path{fill:none;stroke:var(--leaf);stroke-width:4;stroke-linecap:round;stroke-dasharray:200;stroke-dashoffset:200;animation:draw 1s .1s forwards}
+.tick path{animation-delay:.6s}
+@keyframes draw{to{stroke-dashoffset:0}}
+footer{background:var(--deep);color:var(--on-deep);padding:56px 0 40px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer p{opacity:.8;max-width:42ch;font-size:.95rem}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:860px){
+ section{padding:70px 0}
+ .hero .wrap,.kids,.visit,.scope{grid-template-columns:1fr}
+ .grid3{grid-template-columns:1fr}.habitgrid{grid-template-columns:1fr 1fr}
+ .scope{padding:28px}.tabs{flex-direction:row;overflow-x:auto}.tab{white-space:nowrap}
+ .links{position:fixed;top:70px;left:0;right:0;background:var(--bg);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .4s;z-index:-1}
+ .links.open{transform:none}.menu{display:block}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal,.hero h1 span,.hero p.lead,.cta{opacity:1;transform:none}}
+.hi{display:block;width:calc(100% + 48px);height:120px;object-fit:cover;margin:-24px -24px 16px;transition:transform .6s}
+.habit{overflow:hidden}.habit:hover .hi{transform:scale(1.06)}
+.kidart{aspect-ratio:auto;border-radius:28px;animation:none;background:none;display:block;overflow:visible}.kidart img{width:100%;height:auto;display:block;border-radius:28px;box-shadow:0 24px 50px -24px rgba(14,107,107,.5)}
+.btn svg,.fab svg,.soc svg{width:20px;height:20px;vertical-align:-4px;margin-right:8px;fill:currentColor}
+.btn.wa{background:#25d366;color:#06331a}
+.btn.call{background:var(--sky);color:#fff}
+.fabs{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:12px;z-index:30}
+.fab{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 10px 24px -8px rgba(0,0,0,.45);text-decoration:none;transition:transform .25s;position:relative}
+.fab svg{margin:0;width:26px;height:26px}.fab:hover{transform:scale(1.12) rotate(-6deg)}
+.fab.w{background:#25d366}.fab.c{background:var(--teal)}
+.fab.w::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:ping 2.2s infinite}
+.mapbox{margin-top:40px;border-radius:26px;overflow:hidden;border:1px solid var(--line);background:var(--surface);min-height:340px;position:relative}
+.mapbox iframe{width:100%;height:400px;border:0;display:block}
+.mapph{display:grid;place-items:center;text-align:center;padding:60px 24px;min-height:340px;background:repeating-linear-gradient(45deg,transparent 0 18px,var(--leaf10) 18px 36px)}
+.mapph p{color:var(--muted);margin:8px auto 18px;max-width:44ch}
+.connect{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.soc{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:999px;background:rgba(255,255,255,.12);text-decoration:none;font-weight:600;transition:background .25s,transform .25s}
+.soc:hover{background:rgba(255,255,255,.24);transform:translateY(-3px)}
+.soc svg{margin:0 6px 0 0}
+.soc.empty{opacity:.55}
+.mapsvg{display:block;width:100%;height:400px;background:var(--mapbg)}
+.mapsvg .rd{stroke:var(--surface);fill:none;stroke-linecap:round}
+.pin{animation:bob 2.2s ease-in-out infinite;transform-origin:400px 190px}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.pulse{transform-origin:400px 196px;animation:pl 2.2s ease-out infinite}
+@keyframes pl{from{transform:scale(.3);opacity:.7}to{transform:scale(2.4);opacity:0}}
+.mapcard{position:absolute;left:20px;bottom:20px;right:20px;max-width:380px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px 20px;box-shadow:0 18px 40px -18px rgba(0,0,0,.4)}
+.mapcard p{color:var(--muted);font-size:.93rem;margin:4px 0 14px}
+.mapcard .btn{padding:10px 18px;font-size:.92rem}
+.fh{font:700 1.05rem 'Bricolage Grotesque';margin-bottom:6px}
+@media(max-width:860px){.cta .btn{flex:1 1 100%;text-align:center}}
+
+/* ===== Android and low-end phone support ===== */
+:root{--glass:rgba(242,250,247,.92);--leaf22:rgba(63,181,148,.22);--leaf25:rgba(63,181,148,.25);--leaf10:rgba(63,181,148,.1);--habitbg:#e4f5ef;--mapbg:#e9f6f1}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--glass:rgba(12,31,34,.92);--habitbg:#10292a;--mapbg:#15383a}}
+:root[data-theme="dark"]{--glass:rgba(12,31,34,.92);--habitbg:#10292a;--mapbg:#15383a}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.menu{min-width:48px;min-height:48px}
+.tab,.soc{min-height:48px}
+.tabs{-webkit-overflow-scrolling:touch}
+input,select,textarea{font-size:16px;min-height:48px;-webkit-appearance:none;appearance:none}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 20px) 55%,calc(100% - 14px) 55%;background-size:6px 6px;background-repeat:no-repeat;padding-right:38px}
+img{max-width:100%}
+footer .wrap{padding-bottom:70px}
+@media(hover:none){.card:hover,.habit:hover,.btn:hover,.fab:hover,.soc:hover{transform:none;box-shadow:none}.card:hover .ic{transform:none}}
+@media(max-width:860px){.blob{filter:blur(40px);animation:none}.hero{padding-top:100px}}
+@media(max-width:400px){body{font-size:16px}.wrap{padding:0 16px}.hero h1{font-size:2.3rem}h2{font-size:1.8rem}.scope,.hours,form{padding:22px}.card{padding:22px}.habitgrid{grid-template-columns:1fr}.fab{width:52px;height:52px}.mapcard{left:12px;right:12px;bottom:12px}.mapsvg{height:340px}}
+</style>
+</head>
+<body>
+<header id="top"><div class="wrap nav">
+ <a class="logo" href="#top"><svg viewBox="0 0 32 32"><path d="M16 28S3 20 3 11a6.5 6.5 0 0 1 13-2 6.5 6.5 0 0 1 13 2c0 9-13 17-13 17z" fill="#3fb594"/><path d="M6 16h6l2-4 3 8 2-4h7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Soteria</a>
+ <button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+ <nav class="links" id="links"><a href="#services">Services</a><a href="#young">Young minds</a><a href="#habits">Daily habits</a><a href="#visit">Visit</a><a class="btn" href="tel:+260765607141"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>Call now</a></nav>
+</div></header>
+
+<div class="fabs"><a class="fab w" data-wa href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm5.800 14.200c-.25.700-1.400 1.300-1.900 1.300-.5.050-1.100.07-1.800-.1a16 16 0 0 1-6.200-4.800c-.9-1.200-1.500-2.500-1.500-3.800 0-1.300.7-1.900.9-2.200.25-.25.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 1.900c.1.200.1.400 0 .5l-.4.600-.4.500c-.1.150-.2.300-.1.500.5.900 1.200 1.700 2 2.300.8.600 1.600.9 1.900 1 .25.1.4.1.500-.1l.8-1c.2-.25.400-.2.600-.1l1.800.9c.25.1.4.2.5.3.1.2.1.8-.2 1.600z"/></svg></a><a class="fab c" href="tel:+260765607141" aria-label="Call now"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg></a></div>
+<main>
+<section class="hero"><div class="blob b1"></div><div class="blob b2"></div>
+ <div class="wrap">
+  <div>
+   <div class="status"><span class="dot" id="dot"></span><span id="stat">Checking hours…</span></div>
+   <h1><span>Your mental wellness</span><span>starts here.</span></h1>
+   <p class="lead">Soteria Health & Wellness is a psychiatric clinic off Roan Road in Kabulonga, Lusaka. We offer compassionate, evidence-based assessment, treatment and rehabilitation for adults, children and older people.</p>
+   <div class="cta"><a class="btn call" href="tel:+260765607141"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>Call now</a><a class="btn wa" data-wa href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm5.800 14.200c-.25.700-1.400 1.300-1.900 1.300-.5.050-1.100.07-1.800-.1a16 16 0 0 1-6.200-4.800c-.9-1.200-1.500-2.500-1.500-3.800 0-1.300.7-1.900.9-2.200.25-.25.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 1.900c.1.200.1.400 0 .5l-.4.600-.4.500c-.1.150-.2.300-.1.500.5.900 1.200 1.700 2 2.300.8.600 1.600.9 1.900 1 .25.1.4.1.500-.1l.8-1c.2-.25.400-.2.600-.1l1.800.9c.25.1.4.2.5.3.1.2.1.8-.2 1.600z"/></svg>WhatsApp us</a><a class="btn ghost" href="#visit">Book a consultation</a></div>
+  </div>
+  <div class="breathe">
+   <button class="orbwrap" id="orb" aria-label="Breathing guide. Press to pause or resume."><span class="ring"></span><span class="orb"></span><span class="orbtxt" id="orbtxt">Breathe in</span></button>
+   <p class="hint">Take a moment. Follow the circle for one minute. Press it to pause.</p>
+  </div>
+ </div>
+</section>
+
+<section id="services"><div class="wrap">
+ <div class="reveal"><h2>Care that meets you where you are</h2><p class="lead">From your first assessment to long-term recovery, our team stays with you at every stage.</p></div>
+ <div class="grid3">
+  <div class="card reveal"><div class="ic">🧭</div><h3>Assessment and diagnosis</h3><p>A thorough psychiatric evaluation, including neuropsychiatric assessment, to understand what you are experiencing and why.</p></div>
+  <div class="card reveal"><div class="ic">🌱</div><h3>Treatment and therapy</h3><p>Medication management and psychotherapies such as CBT, DBT and interpersonal therapy, matched to your needs.</p></div>
+  <div class="card reveal"><div class="ic">🏡</div><h3>Rehabilitation (outpatient)</h3><p>Structured programs that support recovery, build coping skills and help you return to daily life.</p></div>
+ </div>
+ <div class="scope reveal" style="margin-top:20px">
+  <div class="tabs" role="tablist" aria-label="Scope of services">
+   <button class="tab" role="tab" aria-selected="true" data-p="0">General psychiatry</button>
+   <button class="tab" role="tab" aria-selected="false" data-p="1">Addiction psychiatry</button>
+   <button class="tab" role="tab" aria-selected="false" data-p="2">Support and community</button>
+   <button class="tab" role="tab" aria-selected="false" data-p="3">Child and adolescent</button>
+   <button class="tab" role="tab" aria-selected="false" data-p="4">Geriatric psychiatry</button>
+   <button class="tab" role="tab" aria-selected="false" data-p="5">Other presentations</button>
+  </div>
+  <div>
+   <div class="panel show"><h3>General psychiatry</h3><p>Help for the most common mental health conditions, from first symptoms to ongoing care.</p><div class="chips"><span>Psychosis</span><span>Depression</span><span>Anxiety</span><span>Bipolar and mania</span></div></div>
+   <div class="panel"><h3>Addiction psychiatry</h3><p>Non-judgmental treatment for dependence, with support for the mental health needs behind it.</p><div class="chips"><span>Alcohol and substance use</span><span>Behavioral addictions</span></div></div>
+   <div class="panel"><h3>Support and community services</h3><p>Practical help when life feels like too much, and fast support in a crisis.</p><div class="chips"><span>Stress management</span><span>Crisis intervention</span></div></div>
+   <div class="panel"><h3>Child and adolescent psychiatry</h3><p>Specialist care for children and teenagers, with their families involved at every step.</p><div class="chips"><span>Emotional concerns</span><span>Behavioral concerns</span><span>Family-focused care</span></div></div>
+   <div class="panel"><h3>Geriatric psychiatry</h3><p>Mental health care designed around the needs of older adults.</p><div class="chips"><span>Mood and memory</span><span>Late-life anxiety</span></div></div>
+   <div class="panel"><h3>Other psychiatric presentations</h3><p>Not sure where your concern fits? We also see people with these difficulties, and offer related consultation.</p><div class="chips"><span>Sleep disorders</span><span>Eating disorders</span><span>Sexual disorders</span><span>Gender identity disorders</span></div></div>
+  </div>
+ </div>
+</div></section>
+
+<section id="young"><div class="wrap kids">
+ <div class="kidart reveal"><img src="images/habit-mindfulness.jpg" alt="A young person talking with a counsellor"></div>
+ <div class="reveal"><h2>Mental health support for young minds</h2><p class="lead">Specialist psychiatric care for children and adolescents, in a calm space where they feel heard and parents feel included.</p>
+ <ul class="list"><li>Assessment and diagnosis</li><li>Emotional and behavioral concerns</li><li>Treatment and support</li><li>Family-focused care</li></ul></div>
+</div></section>
+
+<section class="habits" id="habits"><div class="wrap">
+ <div class="reveal"><h2>Four small habits for a steadier day</h2><p class="lead">Tap each habit to see how it helps, and mark the ones you have done today.</p></div>
+ <div class="habitgrid">
+  <button class="habit reveal" aria-pressed="false"><img class="hi" alt="" src="images/habit-hydration.jpg"><h3>Begin with mindfulness</h3><div class="more">Avoid checking your phone for the first few minutes. Breathe slowly and set one intention for the day.</div></button>
+  <button class="habit reveal" aria-pressed="false"><img class="hi" alt="" src="images/habit-screen-breaks.jpg"><h3>Hydrate and eat regularly</h3><div class="more">Drinking enough water and eating regular meals helps maintain your energy and mood.</div></button>
+  <button class="habit reveal" aria-pressed="false"><img class="hi" alt="" src="images/habit-reflect.jpg"><h3>Take screen breaks</h3><div class="more">Step away from the screen every hour. Stretch, look at something far away, and breathe.</div></button>
+  <button class="habit reveal" aria-pressed="false"><img class="hi" alt="" src="images/young-minds.jpg"><h3>Reflect before sleep</h3><div class="more">Spend five minutes before sleep writing down how the day went and one thing you are grateful for.</div></button>
+ </div>
+ <div class="progress"><div class="bar"><i id="fill"></i></div><span id="count">0 of 4 done today</span></div>
+</div></section>
+
+<section id="visit"><div class="wrap">
+ <div class="reveal"><h2>Book a consultation</h2><p class="lead">Off Roan Rd, Kabulonga, Lusaka. Walk in during the day, or arrange an appointment for the evening.</p></div>
+ <div class="visit" style="margin-top:44px">
+  <div class="hours reveal"><h3>Opening hours</h3>
+   <dl><dt>Monday to Friday</dt><dd><span>08:00 – 17:00</span><span>Walk-ins and appointments</span></dd><dd><span>17:00 – 22:00</span><span>By appointment only</span></dd>
+   <dt>Saturday</dt><dd><span>09:00 – 13:00</span><span>Walk-ins and appointments</span></dd><dd><span>13:00 – 18:00</span><span>By appointment only</span></dd></dl>
+   <p style="margin-top:22px;color:var(--muted);font-size:.95rem">In an emergency, go to your nearest emergency department. Soteria offers crisis intervention support during clinic hours.</p>
+   <div class="cta" style="opacity:1;animation:none"><a class="btn call" href="tel:+260765607141"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>Call now</a><a class="btn wa" data-wa href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm5.800 14.200c-.25.700-1.400 1.300-1.900 1.300-.5.050-1.100.07-1.800-.1a16 16 0 0 1-6.200-4.800c-.9-1.200-1.500-2.500-1.500-3.800 0-1.300.7-1.900.9-2.200.25-.25.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 1.900c.1.200.1.400 0 .5l-.4.600-.4.500c-.1.150-.2.300-.1.500.5.900 1.200 1.700 2 2.300.8.600 1.600.9 1.900 1 .25.1.4.1.500-.1l.8-1c.2-.25.400-.2.600-.1l1.800.9c.25.1.4.2.5.3.1.2.1.8-.2 1.600z"/></svg>WhatsApp</a></div>
+  </div>
+  <div class="reveal">
+  <form id="form">
+   <label>Your name<input name="n" required autocomplete="name"></label>
+   <label>Phone number<input name="p" type="tel" required autocomplete="tel"></label>
+   <label>What would you like help with?<select name="s"><option>General psychiatry</option><option>Addiction psychiatry</option><option>Child and adolescent</option><option>Geriatric psychiatry</option><option>Stress or crisis support</option><option>Not sure yet</option></select></label>
+   <label>Preferred day and time<input name="d" placeholder="For example, Saturday morning" required></label>
+   <button class="btn" type="submit">Request appointment</button>
+  </form>
+  <div class="done" id="done"><svg class="tick" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28"/><path d="M20 33l9 9 16-18"/></svg><h3>Request ready, <span id="who"></span></h3><p class="lead" style="margin:10px auto 20px">Send it by text, or call us to confirm. A team member will reply to arrange your time.</p><a class="btn" id="sms" href="#">Text this request</a> <a class="btn ghost" href="tel:+260765607141">Call instead</a></div>
+  </div>
+ </div>
+<div class="mapbox reveal" id="mapbox"></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <div><div class="logo" style="color:#5fd1b0;font-size:1.6rem">Soteria</div><p style="margin-top:10px">Health & Wellness. Compassionate, evidence-based psychiatric care in Lusaka.</p></div>
+ <div><div class="fh">Connect with us</div><p>Off Roan Rd, Kabulonga<br>+260 765 607 141<br>soteriahwc@gmail.com</p><div class="connect"><a class="soc" id="fb" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.600 9.900v-7H7.900V12h2.500V9.800c0-2.500 1.500-3.900 3.800-3.900 1.100 0 2.200.2 2.200.2v2.500h-1.300c-1.200 0-1.600.8-1.600 1.600V12h2.800l-.4 2.900h-2.300v7A10 10 0 0 0 22 12z"/></svg>Facebook</a><a class="soc" id="mail" href="#"><svg viewBox="0 0 24 24"><path fill="#ea4335" d="M3 6.500V18a1.500 1.500 0 0 0 1.500 1.500H7v-9L3 6.500z"/><path fill="#4285f4" d="M17 19.500h2.500A1.500 1.500 0 0 0 21 18V6.500l-4 3z"/><path fill="#fbbc04" d="M17 5.500v5l4-3V6c0-1.700-1.900-2.600-3.300-1.600z"/><path fill="#34a853" d="M7 10.500v9h10v-9l-5 3.700z"/><path fill="#c5221f" d="M3 6v.5l4 3v-5L6.300 4.400C4.900 3.400 3 4.300 3 6z"/></svg>Email</a></div><p style="margin-top:22px">© 2026 Soteria Health & Wellness</p></div>
+</div></footer>
+
+<script>
+/* ===== EDIT YOUR LINKS HERE ===== */
+const SITE={
+ facebook:"",            // e.g. "https://www.facebook.com/yourpage"
+ email:"soteriahwc@gmail.com",
+ whatsapp:"260765607141",// number with country code, no + or spaces
+ mapEmbed:"https://maps.google.com/maps?q=-15.415376,28.342574&z=16&output=embed"
+};
+/* ================================= */
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const hd=$('header');addEventListener('scroll',()=>hd.classList.toggle('solid',scrollY>20),{passive:true});
+const menu=$('.menu'),links=$('#links');
+menu.onclick=()=>{const o=links.classList.toggle('open');menu.setAttribute('aria-expanded',o)};
+links.onclick=e=>{if(e.target.tagName==='A'){links.classList.remove('open');menu.setAttribute('aria-expanded',false)}};
+// reveal
+const io=window.IntersectionObserver?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08}):null;
+$$('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4)*90+'ms';io?io.observe(el):el.classList.add('in')});
+// breathing
+const orb=$('#orb'),txt=$('#orbtxt');let inh=false,paused=false;
+function cycle(){if(paused)return;inh=!inh;orb.classList.toggle('in',inh);txt.textContent=inh?'Breathe in':'Breathe out'}
+setTimeout(()=>{cycle()},600);setInterval(cycle,4000);
+orb.onclick=()=>{paused=!paused;if(paused)txt.textContent='Paused';else cycle()};
+// tabs
+$$('.tab').forEach(t=>t.onclick=()=>{$$('.tab').forEach(x=>x.setAttribute('aria-selected',x===t));$$('.panel').forEach((p,i)=>p.classList.toggle('show',i==t.dataset.p))});
+// habits
+const hs=$$('.habit');hs.forEach(h=>h.onclick=()=>{h.setAttribute('aria-pressed',h.getAttribute('aria-pressed')!=='true');const n=hs.filter(x=>x.getAttribute('aria-pressed')==='true').length;$('#fill').style.width=n*25+'%';$('#count').textContent=n===4?'All four done. Well done today.':n+' of 4 done today'});
+// open now (Lusaka time)
+function status(){try{const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Africa/Lusaka',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());const g=t=>p.find(x=>x.type===t).value;const d=g('weekday'),m=(+g('hour')%24)*60+ +g('minute');let w=null,a=null;if(['Mon','Tue','Wed','Thu','Fri'].includes(d)){w=[480,1020];a=[1020,1320]}else if(d==='Sat'){w=[540,780];a=[780,1080]}
+let s,on=false;if(w&&m>=w[0]&&m<w[1]){s='Open now. Walk-ins welcome.';on=true}else if(a&&m>=a[0]&&m<a[1]){s='Open now by appointment only.';on=true}else s='Closed now. Book ahead for your next visit.';$('#stat').textContent=s;$('#dot').classList.toggle('on',on)}catch(e){$('#stat').textContent='Kabulonga, Lusaka'}}
+status();setInterval(status,60000);
+// form
+$('#form').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);$('#who').textContent=f.get('n').split(' ')[0];const body=`Hello Soteria, I would like to book a consultation. Name: ${f.get('n')}. Phone: ${f.get('p')}. Topic: ${f.get('s')}. Preferred time: ${f.get('d')}.`;$('#sms').href='sms:+260765607141?body='+encodeURIComponent(body);e.target.style.display='none';$('#done').classList.add('show')};
+
+document.querySelectorAll('[data-wa]').forEach(a=>a.href='https://wa.me/'+SITE.whatsapp+'?text='+encodeURIComponent('Hello Soteria, I would like to ask about booking a consultation.'));
+const fb=$('#fb'),ml=$('#mail');
+if(SITE.facebook)fb.href=SITE.facebook;else{fb.classList.add('empty');fb.title='Add your Facebook link in SITE.facebook';fb.onclick=e=>e.preventDefault()}
+if(SITE.email)ml.href='mailto:'+SITE.email;else{ml.classList.add('empty');ml.title='Add your email in SITE.email';ml.onclick=e=>e.preventDefault()}
+const mb=$('#mapbox');
+if(SITE.mapEmbed){document.addEventListener('securitypolicyviolation',e=>{if(/frame/.test(e.violatedDirective))drawMap()});mb.innerHTML='<iframe title="Soteria on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="'+SITE.mapEmbed+'"></iframe>'}
+else{drawMap()}
+function drawMap(){const q='https://www.google.com/maps/search/?api=1&query=-15.415376,28.342574';mb.innerHTML=`<svg class="mapsvg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrative map of Kabulonga, Lusaka"><path d="M0 270Q150 230 260 300T520 330T800 280V400H0Z" fill="var(--leaf)" opacity=".18"/><rect x="560" y="40" width="190" height="120" rx="30" fill="var(--leaf)" opacity=".3"/><g class="rd"><path d="M-20 120L820 200" stroke-width="22"/><path d="M150 -20L260 420" stroke-width="14"/><path d="M560 -20L470 420" stroke-width="14"/><path d="M-20 330L820 300" stroke-width="10"/><path d="M300 60L760 90" stroke-width="8"/></g><text x="60" y="128" font-size="15" font-weight="700" fill="var(--muted)" transform="rotate(5 60 128)">Roan Rd</text><text x="600" y="112" font-size="14" fill="var(--muted)">Kabulonga</text><circle class="pulse" cx="400" cy="196" r="26" fill="var(--leaf)"/><g class="pin"><path d="M400 196C382 168 372 156 372 140a28 28 0 0 1 56 0c0 16-10 28-28 56z" fill="var(--teal)"/><circle cx="400" cy="140" r="11" fill="#fff"/></g></svg><div class="mapcard"><h3>Soteria Health & Wellness</h3><p>Off Roan Rd, Kabulonga, Lusaka. Illustrative map; tap below for the exact location.</p><a class="btn" target="_blank" rel="noopener" href="${q}">Open in Google Maps</a></div>`}
+</script>
+</body>
+</html>
